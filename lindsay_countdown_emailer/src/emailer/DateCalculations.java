@@ -16,8 +16,6 @@ public class DateCalculations {
 	}
 	
 	public static int getDateDiff(){
-		Seconds sec = Seconds.secondsBetween(getCurrentDate(), getArrivalDate());
-		
-		return sec.getSeconds();
+		return Seconds.secondsBetween(getCurrentDate(), getArrivalDate()).getSeconds();
 	}
 }
