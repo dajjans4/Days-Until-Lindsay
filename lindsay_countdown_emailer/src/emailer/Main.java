@@ -8,7 +8,7 @@ public class Main {
 		boolean sendEmail = true;
 		int tmpSecs = 0;
 		System.out.println("Time until Winnipeg:");
-		while(DateCalculations.getDateDiff() > 0){
+		while(DateCalculations.getDateDiff() < 0){
 			int secsToWinnipeg = DateCalculations.getDateDiff();
 			if(tmpSecs != secsToWinnipeg){
 				System.out.print(DateCalculations.getText(secsToWinnipeg)+"\r");
@@ -28,6 +28,8 @@ public class Main {
 				e.printStackTrace();
 			}
 		}
+		
+		Logging.logEvent("test1", "test2");
 	}
 
 }
