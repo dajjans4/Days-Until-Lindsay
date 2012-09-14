@@ -1,2 +1,6 @@
 #Ignore the bin directories
 lindsay_countdown_emailer/bin/*
+#Don't need to save the class path
+lindsay_countdown_emailer/.classpath
+
+
