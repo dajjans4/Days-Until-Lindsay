@@ -3,7 +3,6 @@ package emailer;
 import java.util.Properties;
 
 import javax.mail.Message;
-import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
@@ -26,7 +25,7 @@ public class Mail {
 		props.put("mail.smtp.port", "587");
 		props.put("mail.smtp.auth", "true");
 
-		String[] to = {"dajjans4@gmail.com", "lindshughs@gmail.com"}; // added this line
+		String[] to = {"dajjans4@gmail.com"};//, "lindshughs@gmail.com"}; // added this line
 
 		Session session = Session.getDefaultInstance(props, null);
 		LocalDateTime today = DateCalculations.getCurrentDate();
@@ -52,7 +51,7 @@ public class Mail {
 			transport.connect(host, from, pass);
 			transport.sendMessage(message, message.getAllRecipients());
 			transport.close();
-		}catch(MessagingException e){
+		}catch(Exception e){
 			Logging.logEvent(date, e.toString());
 			return;
 		}
