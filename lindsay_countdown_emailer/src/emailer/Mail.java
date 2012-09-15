@@ -18,14 +18,14 @@ public class Mail {
 		String from = "dajjans4";
 		String pass = "R1c2LDM8";
 		Properties props = System.getProperties();
-		props.put("mail.smtp.starttls.enable", "true"); // added this line
+		props.put("mail.smtp.starttls.enable", "true");
 		props.put("mail.smtp.host", host);
 		props.put("mail.smtp.user", from);
 		props.put("mail.smtp.password", pass);
 		props.put("mail.smtp.port", "587");
 		props.put("mail.smtp.auth", "true");
 
-		String[] to = {"dajjans4@gmail.com"};//, "lindshughs@gmail.com"}; // added this line
+		String[] to = {"dajjans4@gmail.com", "lindshughs@gmail.com"};
 
 		Session session = Session.getDefaultInstance(props, null);
 		LocalDateTime today = DateCalculations.getCurrentDate();
