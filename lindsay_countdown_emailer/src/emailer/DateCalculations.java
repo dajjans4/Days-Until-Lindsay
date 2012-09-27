@@ -8,8 +8,8 @@ import org.joda.time.Seconds;
 public class DateCalculations {
 
 	public static LocalDateTime getArrivalDate(){
-		//I arrive in Winnipeg at 12:15 am on Oct 5th EST
-		return new LocalDateTime(2012, 10, 5, 0, 15);
+		//Arrival date (year, month, day, hour, minute)
+		return new LocalDateTime(2012, 10, 5, 0, 6);
 	}
 
 	public static LocalDateTime getCurrentDate(){

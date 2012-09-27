@@ -15,6 +15,7 @@ public class Main {
 				System.out.print(DateCalculations.getText(secsToWinnipeg)+"\r");
 				tmpSecs = secsToWinnipeg;
 			}
+			//86400 is number of seconds in a day
 			if(secsToWinnipeg % 86400 == 0){
 				if (sendEmail){
 					Mail.sendEmail(secsToWinnipeg);
