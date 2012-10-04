@@ -7,6 +7,7 @@ public class Main {
 
 	public static void main(String args[]){
 		boolean sendEmail = true;
+		boolean sendLessThan12 = true;
 		int tmpSecs = 0;
 		System.out.println("Time until Winnipeg:");
 		while(DateCalculations.getDateDiff() > 0){
@@ -23,6 +24,14 @@ public class Main {
 				}
 			}else{
 				sendEmail = true;
+			}
+			if(secsToWinnipeg < 43200 && secsToWinnipeg % 3600 == 0){
+				if(sendLessThan12){
+					Mail.sendEmail(secsToWinnipeg);
+					sendLessThan12 = false;
+				}
+			}else{
+				sendLessThan12 = true;
 			}
 			try {
 				Thread.sleep(500);
