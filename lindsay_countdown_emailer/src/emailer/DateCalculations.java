@@ -10,6 +10,7 @@ public class DateCalculations {
 	public static LocalDateTime getArrivalDate(){
 		//Arrival date (year, month, day, hour, minute)
 		return new LocalDateTime(2012, 11, 25, 21, 38);
+		
 	}
 
 	public static LocalDateTime getCurrentDate(){
@@ -20,11 +21,13 @@ public class DateCalculations {
 		return Seconds.secondsBetween(getCurrentDate(), getArrivalDate()).getSeconds();
 	}
 	public static String getText(int seconds){
-		Period p = new Period(seconds*1000);
-		int days = p.getHours() / 24;
-		int hours = p.getHours() % 24;
+		
+		int days = seconds / (3600*24);
+		int hours = (seconds/3600) % 24;
+		int minutes = (seconds/60) % 60;
+		int secs = seconds % 60;
 
-		return (days + " days " + hours + " hours " + p.getMinutes() 
-				+ " minutes and " + p.getSeconds() + " seconds!");
+		return (days + " days " + hours + " hours " + minutes 
+				+ " minutes and " + secs + " seconds!");
 	}
 }
