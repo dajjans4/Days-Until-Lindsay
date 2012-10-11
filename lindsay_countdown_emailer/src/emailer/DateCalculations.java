@@ -9,7 +9,7 @@ public class DateCalculations {
 
 	public static LocalDateTime getArrivalDate(){
 		//Arrival date (year, month, day, hour, minute)
-		return new LocalDateTime(2012, 10, 5, 0, 6);
+		return new LocalDateTime(2012, 11, 25, 21, 38);
 	}
 
 	public static LocalDateTime getCurrentDate(){
